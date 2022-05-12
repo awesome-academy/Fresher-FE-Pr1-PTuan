@@ -1,0 +1,26 @@
+.main-heading {
+  @include font($textTrans: uppercase, $fs: $fs-large);
+  margin-top: 3rem;
+  width: fit-content;
+}
+.main-price {
+  @include font($textTrans: uppercase, $fs: $fs-large, $color: $orange);
+}
+
+.detail__image {
+  width: 100%;
+  position: relative;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  .tag {
+    height: 8rem;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
