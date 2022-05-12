@@ -1,0 +1,15 @@
+
+extend ../base/base.pug
+block variables
+  - const current="/"
+  - const title="Home"
+block title
+    title= title + " | Drink Website"
+
+block carousel
+  +carousel({ id: 'carousel-banner', data: banner })
+
+block main
+  main
+    .container-fluid
+      p main home
