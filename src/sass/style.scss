@@ -4,13 +4,13 @@
 @import "./base/global";
 @import "./base/base";
 
-@import "./pages/index";
-
 @import "./layouts/header";
 
 @import "./components/navbar";
 @import "./components/dropdown";
 @import "./components/title";
 @import "./components/button";
+@import "./components/product";
+@import "./pages/index";
 
 @import "./layouts/footer";

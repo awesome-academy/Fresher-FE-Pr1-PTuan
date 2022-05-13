@@ -20,6 +20,7 @@
   }
 
   &-navigate {
+    font-family: $ff-playfair;
     @include mg($x: 1.5rem);
 
     &:first-child {
