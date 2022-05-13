@@ -1,0 +1,72 @@
+header {
+  @include flex($justify: space-between, $align: center);
+  @include pd($y: 1rem);
+  font-size: $fs-light;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: $z-sticky;
+
+  .header-navigate {
+    @include flex($gap: auto);
+
+    &__item {
+      @include mg($x: 1rem);
+      position: relative;
+
+      &:hover {
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $orange;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    &__link {
+      color: $white;
+
+      &:first-child {
+        margin-left: 0;
+        list-style-type: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+    }
+    .cross {
+      color: $white;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .header-search {
+    & > input {
+      @include pd($x: 0.5rem, $y: 0.2rem);
+      color: $white;
+      background-color: transparent;
+      border: none;
+      border-left: 1px solid $p-gray;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .icon {
+      color: $white;
+    }
+  }
+}
