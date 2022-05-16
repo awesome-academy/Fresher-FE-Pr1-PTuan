@@ -1,4 +1,5 @@
 include ../data/home.data.pug
+include ../data/footer.data.pug
 
 include ../components/navbar.pug
 include ../components/carousel.pug
@@ -34,9 +35,10 @@ html
     link(href='./css/style.css' rel='stylesheet')
   body
 
-    +header
+    +header()
 
     block carousel
+
 
     +navbar()
 
