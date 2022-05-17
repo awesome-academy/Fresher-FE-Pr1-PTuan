@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 2000px;
+  margin-top: 2rem;
 
   &__logo-brand {
     width: 100%;
@@ -20,6 +20,7 @@
   }
 
   &-navigate {
+    font-family: $ff-playfair;
     @include mg($x: 1.5rem);
 
     &:first-child {

@@ -1,26 +1,67 @@
 .main-heading {
   @include font($textTrans: uppercase, $fs: $fs-large);
+  position: relative;
   margin-top: 3rem;
   width: fit-content;
+
+  &::after {
+    content: "";
+    width: 4rem;
+    height: 0.5rem;
+    background-image: url("/assets/images/v-title.png");
+    position: absolute;
+    top: 3rem;
+    left: 0;
+  }
 }
+
 .main-price {
-  @include font($textTrans: uppercase, $fs: $fs-large, $color: $orange);
+  @include font($fs: $fs-large, $color: $orange);
+
+  sup {
+    text-transform: lowercase;
+  }
 }
 
 .detail__image {
-  width: 100%;
+  width: auto;
+
+  &::after {
+    @include tag($type: "sale");
+    background-size: 8rem 8rem;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.tag-sale {
   position: relative;
 
-  img {
-    height: 100%;
-    width: auto;
+  &::after {
+    @include tag($type: "sale");
   }
+}
 
-  .tag {
-    height: 8rem;
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
+.tag-new {
+  position: relative;
+
+  &::after {
+    @include tag($type: "new");
+  }
+}
+
+.tag-hot {
+  position: relative;
+
+  &::after {
+    @include tag($type: "hot");
+  }
+}
+
+.read-more {
+  @include mg($y: 1rem);
+  @include font($fs: $fs-light, $color: rgba($p-gray, 0.7));
+  &:hover {
+    color: $orange;
   }
 }

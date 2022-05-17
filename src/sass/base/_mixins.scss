@@ -77,3 +77,29 @@ $breakpoints: (
 @mixin pd($x: 0, $y: 0) {
   padding: $y $x;
 }
+
+@mixin tag($type: "") {
+  @if $type == "sale" {
+    background: url("/assets/images/tag1.png") no-repeat;
+  }
+
+  @if $type == "new" {
+    background: url("/assets/images/tag2.png") no-repeat;
+  }
+
+  @if $type == "hot" {
+    background: url("/assets/images/tag3.png") no-repeat;
+  }
+
+  @if $type == "" {
+    background: none;
+  }
+
+  content: " ";
+  background-size: 4rem 4rem;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  top: 0;
+  left: 0;
+}
