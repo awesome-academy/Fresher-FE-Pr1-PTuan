@@ -82,15 +82,19 @@ $breakpoints: (
   @if $type == "sale" {
     background: url("/assets/images/tag1.png") no-repeat;
   }
+
   @if $type == "new" {
     background: url("/assets/images/tag2.png") no-repeat;
   }
+
   @if $type == "hot" {
     background: url("/assets/images/tag3.png") no-repeat;
   }
+
   @if $type == "" {
     background: none;
   }
+
   content: " ";
   background-size: 4rem 4rem;
   position: absolute;

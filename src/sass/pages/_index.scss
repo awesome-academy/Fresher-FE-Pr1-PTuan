@@ -1,5 +1,4 @@
 .main-container {
-  height: 1000px;
   background: url("/assets/images/bg-left.jpg") no-repeat left top,
     url("/assets/images/bg-right.jpg") no-repeat right top;
   background-repeat: no-repeat;
@@ -27,6 +26,12 @@
       & > img {
         width: 100%;
       }
+
+      .detail__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }
@@ -35,7 +40,7 @@
   position: relative;
 
   img {
-    z-index: -1;
+    z-index: $z-negative;
   }
 
   &__product {
@@ -79,5 +84,93 @@
     top: 50%;
     left: 5%;
     width: 90%;
+  }
+}
+
+.collection {
+  @include mg($y: 3rem);
+
+  &__list {
+    @include flex($wrap: wrap);
+
+    &--item {
+      position: relative;
+      width: 25%;
+
+      img {
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:hover .item--hover {
+        border: 3px solid $orange;
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+      }
+
+      .item--hover {
+        @include pd($x: 3rem, $y: 2.95rem);
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.customer {
+  @include pd($x: 2rem);
+
+  &__content {
+    @include flex($align: center, $direction: column, $justify: center);
+  }
+
+  &__quote {
+    @include flex($align: center, $direction: column, $justify: center);
+  }
+  &__description {
+    @include font($color: rgba($p-gray, 0.9), $fs: $fs-light, $fw: $fw-regular);
+    p {
+      line-height: 2;
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    left: 30%;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    border-radius: 0.7rem;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .read-more {
+    display: block;
+    text-align: center;
+  }
+
+  &-job {
+    @include flex($align: center, $direction: column, $justify: center);
+    @include font($fs: $fs-light, $fw: $fw-light);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .carousel-indicators {
+    color: black;
+    bottom: -10%;
   }
 }

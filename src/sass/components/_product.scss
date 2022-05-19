@@ -76,11 +76,9 @@
   }
 
   &__cost {
-    @include font(
-      $textTrans: uppercase,
+    @include font($textTrans: uppercase,
       $fs: $fs-base,
-      $color: rgba($p-gray, 0.6)
-    );
+      $color: rgba($p-gray, 0.6));
     text-decoration: line-through;
     margin-left: 1rem;
 

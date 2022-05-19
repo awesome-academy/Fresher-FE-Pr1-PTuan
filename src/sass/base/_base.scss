@@ -14,6 +14,7 @@
     left: 0;
   }
 }
+
 .main-price {
   @include font($fs: $fs-large, $color: $orange);
 
@@ -23,13 +24,7 @@
 }
 
 .detail__image {
-  width: 100%;
-  position: relative;
-
-  img {
-    height: 100%;
-    width: auto;
-  }
+  width: auto;
 
   &::after {
     @include tag($type: "sale");
@@ -60,5 +55,13 @@
 
   &::after {
     @include tag($type: "hot");
+  }
+}
+
+.read-more {
+  @include mg($y: 1rem);
+  @include font($fs: $fs-light, $color: rgba($p-gray, 0.7));
+  &:hover {
+    color: $orange;
   }
 }

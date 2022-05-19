@@ -1,4 +1,4 @@
-mixin products( {products:products} )
+mixin products({ products })
   each product in products
     .product__image(class= `tag-${product.tag}`)
       img(src=product.urlImage , alt="product image")
