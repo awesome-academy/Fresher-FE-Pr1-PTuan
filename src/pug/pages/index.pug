@@ -3,6 +3,7 @@ extend ../base/base.pug
 block variables
   - const current="/"
   - const title = "Home"
+  - const description = "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo."
 
 block title
     title= title + " | Drink Website"
@@ -27,7 +28,7 @@ block main
                 p.main-price.mt-5 300.000
                   sup đ
                 button.button add to cart
-                p.detail__description  Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+                p.detail__description= description
                 ul.time
                     li.time-detail 334 <br>
                         span ngày

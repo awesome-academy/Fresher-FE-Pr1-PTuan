@@ -113,7 +113,6 @@
 
       .item--hover {
         @include pd($x: 3rem, $y: 2.95rem);
-        cursor: pointer;
         position: absolute;
         top: 0;
         left: 0;
