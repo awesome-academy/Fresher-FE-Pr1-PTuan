@@ -66,3 +66,13 @@ block main
                   .detail__description
                     p= description
                   img(src="./assets/images/6.png", class="mt-3" alt="logo")
+      .tabs
+        .detail__tabs
+          +navAndTaps({tabs: tabContent, content: tabDesc , id: "tabs_product", isListCategories: false})
+        .img-wrapper
+          img(src="/assets/images/home-image7.jpg", alt="detail images")
+          img(src="/assets/images/ruounho.png", class="image-hover" alt="hover-img")
+      .product
+        h2.introduction__title Sản phẩm liên quan
+        .product__item
+          +products({ products: newProducts })
