@@ -21,23 +21,27 @@ block main
       .intro__product
         img(src="./assets/images/home-image1.jpg", alt="home image")
         .intro__details.d-md-flex.d-flex.mx-auto
-            .detail__image
-                img(src="./assets/images/Product/14.jpg" alt="product 14")
-            .detail__content
-                h2.main-heading Rượu nho năm 1987
-                p.main-price.mt-5 300.000
-                  sup đ
-                button.button add to cart
-                p.detail__description= description
-                ul.time
-                    li.time-detail 334 <br>
-                        span ngày
-                    li.time-detail 26<br>
-                        span giờ
-                    li.time-detail 60 <br>
-                        span phút
-                    li.time-detail 15 <br>
-                        span giây
+          .detail__image
+            img(src="./assets/images/Product/14.jpg" alt="product 14")
+          .detail__content
+            h2.main-heading Rượu nho năm 1987
+            p.main-price.mt-5 300.000
+              sup đ
+            button.button add to cart
+            p.detail__description= description
+            ul.time
+              li.time-detail 334
+                br
+                span ngày
+              li.time-detail 26
+                br
+                span giờ
+              li.time-detail 60
+                br
+                span phút
+              li.time-detail 15
+                br
+                span giây
     section.container
       .product__container
         h2.introduction__title Sản phẩm mới
@@ -47,10 +51,10 @@ block main
     section.collection
       ul.collection__list
         each collectionItem in collectionList
-            li.collection__list--item
-                img(src=collectionItem.src, alt=collectionItem.alt)
-                .item--hover
-                  img(src="/assets/images/hover1.png", alt="collection hover")
+          li.collection__list--item
+            img(src=collectionItem.src, alt=collectionItem.alt)
+            .item--hover
+              img(src="/assets/images/hover1.png", alt="collection hover")
     section.container
       .product
         h2.introduction__title Sản phẩm bán chạy

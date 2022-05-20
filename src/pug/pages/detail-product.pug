@@ -1,4 +1,3 @@
-
 extend ../base/base.pug
 block variables
   - const current="/detail-product.html"
@@ -8,24 +7,23 @@ block variables
 block title
     title= title + " | Drink Website"
 
-
 block main
   .container
     section
       +breadcrumb("Trang chủ", "Sản phẩm", "Rượu vang đỏ")
     section.detail__content.container
       .detail__slide
-          ul.detail__list
-              button.detail__up
-                  i(class="fas fa-arrow-up")
-              each item,index in detailImageList
-                  li.detail__item
-                          img(src=item.src, class=`${index === 3 ? "active": ""}` alt=item.alt)
-              button.detail__down
-                  i(class="fas fa-arrow-down")
-          .detail__img
-              img(src="/assets/images/Product/10.jpg", alt="detail images")
-          .detail__product.col-md-6
+        ul.detail__list
+            button.detail__up
+                i(class="fas fa-arrow-up")
+            each item,index in detailImageList
+                li.detail__item
+                        img(src=item.src, class=`${index === 3 ? "active": ""}` alt=item.alt)
+            button.detail__down
+                i(class="fas fa-arrow-down")
+        .detail__img
+            img(src="/assets/images/Product/10.jpg", alt="detail images")
+        .detail__product.col-md-6
               .detail__title
                 h2.main-heading Rượu nho năm 1987
                 p.main-price.mt-5 300.000
