@@ -5,6 +5,7 @@
 @import "./base/base";
 
 @import "./layouts/header";
+@import "./layouts/footer";
 
 @import "./components/navbar";
 @import "./components/dropdown";
@@ -12,6 +13,7 @@
 @import "./components/button";
 @import "./components/product";
 @import "./components/card-blog";
-@import "./pages/index";
+@import "./components/breadcrumb";
 
-@import "./layouts/footer";
+@import "./pages/index";
+@import "./pages/detail.scss";
