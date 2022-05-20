@@ -32,7 +32,7 @@
     }
     p {
       @include mg($y: 1rem);
-      @include font($color: rgba($p-gray, 0.5));
+      @include font($color: $p-gray);
       line-height: 1.4;
       &:hover {
         color: $orange;
@@ -50,7 +50,7 @@
     @include mg($y: 1rem);
     @include font($textTrans: uppercase, $fs: $fs-light);
     min-width: 13rem;
-    color: rgba($p-gray, 0.5);
+    color: $p-gray;
     display: block;
   }
 
@@ -87,6 +87,6 @@
   &__copyright {
     @include pd($y: 1rem);
     @include flex($justify: space-between, $align: center);
-    @include font($fs: $fs-light, $color: rgba($p-gray, 0.7));
+    @include font($fs: $fs-light, $color: $p-gray);
   }
 }

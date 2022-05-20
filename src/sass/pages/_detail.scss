@@ -179,4 +179,50 @@
       width: 80%;
     }
   }
+  &__tabs {
+    @include font($color: $p-gray);
+    width: 100%;
+    .nav-item {
+      .active {
+        border-radius: 0px;
+        background-color: $yellow;
+      }
+    }
+    a {
+      @include font($color: $p-gray);
+      letter-spacing: 0.1rem;
+    }
+    .tab-content {
+      @include font($fs: $fs-light);
+      line-height: 1.5;
+    }
+  }
+}
+
+.tabs {
+  @include flex($align: center);
+  @include mg($y: 4rem);
+  .img-wrapper {
+    @include flex($align: center);
+    @include pd($x: 2rem);
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover .image-hover {
+      opacity: 1;
+      transition: $transition;
+    }
+    .image-hover {
+      cursor: pointer;
+      width: 50%;
+      height: 30%;
+      position: absolute;
+      top: 35%;
+      left: 25%;
+      opacity: 0;
+    }
+  }
 }
