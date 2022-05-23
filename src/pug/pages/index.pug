@@ -1,4 +1,3 @@
-
 extend ../base/base.pug
 block variables
   - const current="/"
@@ -6,7 +5,7 @@ block variables
   - const description = "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo."
 
 block title
-    title= title + " | Drink Website"
+  title= title + " | Drink Website"
 
 block carousel
   +carousel({ id: 'carousel-banner', data: banner, isBanner: true })
@@ -19,7 +18,7 @@ block main
       button.button
         | Xem thêm
       .intro__product
-        img(src="./assets/images/home-image1.jpg", alt="home image")
+        img(src="./assets/images/home-image1.jpg" alt="home image")
         .intro__details.d-md-flex.d-flex.mx-auto
           .detail__image
             img(src="./assets/images/Product/14.jpg" alt="product 14")
@@ -54,7 +53,7 @@ block main
           li.collection__list--item
             img(src=collectionItem.src, alt=collectionItem.alt)
             .item--hover
-              img(src="/assets/images/hover1.png", alt="collection hover")
+              img(src="/assets/images/hover1.png" alt="collection hover")
     section.container
       .product
         h2.introduction__title Sản phẩm bán chạy
