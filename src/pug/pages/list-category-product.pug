@@ -1,0 +1,30 @@
+extend ../base/base.pug
+block variables
+  - const current="/list-category-product.html"
+  - const title = "List Product"
+  - const description = "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo."
+block title
+    title= title + " | Drink Website"
+
+block main
+  .container
+    section
+      +breadcrumb("Trang chủ", "Sản phẩm", "Rượu vang đỏ")
+    section.banner
+      img(src="./assets/images/list-image1.jpg", alt="banner")
+    section.row
+      .col-3.list-category
+        h2.main-heading Danh mục sản phẩm
+        ul.sidebar__list.py-3
+          each item in listCategories
+            li.sidebar__item= item
+        h2.main-heading so sánh sản phẩm
+        p.text-compare Bạn chưa có sản phẩm nào để so sánh
+        h2.main-heading Tag sản phẩm
+        ul.tag__list
+          each itemTag in tags
+            li.tag__item.text-center= itemTag
+        img(src="./assets/images/list-image2.jpg" alt="tag")
+      .col-9.list-product
+        .tab-content
+          +navAndTaps({tabs: navProducts, content: navProducts, id: "list-category", isListCategories: true})
