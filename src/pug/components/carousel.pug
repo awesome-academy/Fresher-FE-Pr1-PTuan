@@ -8,12 +8,12 @@ mixin carousel({ data, id, isBanner })
         else
           .carousel-item(class = `${item.isActive ? "active" :""}`)
             .customer__quote
-                img(src="/assets/images/quote-icon.png", alt="customer image")
+              img(src="/assets/images/quote-icon.png" alt="customer image")
             .customer__description.mt-3
-                p.text-center= item.comment
-                a(href="#" class="read-more") Read more
+              p.text-center= item.comment
+              a(href="#" class="read-more") Read more
             .customer__avatar
-                img(src=item.avatar, alt="customer image")
+              img(src=item.avatar, alt="customer image")
             p.product__title= item.author
             span.customer-job= item.job
     .carousel-indicators

@@ -5,7 +5,7 @@ block variables
   - const description = "Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo."
 
 block title
-    title= title + " | Drink Website"
+  title= title + " | Drink Website"
 
 block main
   .container
@@ -14,62 +14,62 @@ block main
     section.detail__content.container
       .detail__slide
         ul.detail__list
-            button.detail__up
-                i(class="fas fa-arrow-up")
-            each item,index in detailImageList
-                li.detail__item
-                        img(src=item.src, class=`${index === 3 ? "active": ""}` alt=item.alt)
-            button.detail__down
-                i(class="fas fa-arrow-down")
+          button.detail__up
+            i(class="fas fa-arrow-up")
+          each item,index in detailImageList
+            li.detail__item
+              img(src=item.src, class=`${index === 3 ? "active": ""}` alt=item.alt)
+          button.detail__down
+            i(class="fas fa-arrow-down")
         .detail__img
-            img(src="/assets/images/Product/10.jpg", alt="detail images")
+          img(src="/assets/images/Product/10.jpg" alt="detail images")
         .detail__product.col-md-6
-              .detail__title
-                h2.main-heading Rượu nho năm 1987
-                p.main-price.mt-5 300.000
-                  sup đ
-              .detail__rating
-                +rating({rating: 4})
-                span.mx-3 1 Review&lpar;S&rpar;
-                button Add Your Review
-              .detail__color.mt-4
-                  h4.detail__title màu sắc
-                  .color__list.d-flex
-                    +ratio-input({ color : "orange"})
-                    +ratio-input({ color : "black"})
-                    +ratio-input({ color : "red"})
-                  h4.detail__title kích cỡ
-                  .detail__size
-                    select(name='size')
-                      option(value='big') Loại to
-                      option(value='medium') Loại vừa
-                      option(value='small') Loại nhỏ
-                  h4.detail__title Số lượng
-                  .detail__amount
-                    button.btn-adjust -
-                    input(type="text" value="3" class="input-amount")
-                    button.btn-adjust +
-                    button.button(type="button") add to card
-                  .detail__action
-                    button.icon
-                      i.fa-solid.fa-heart
-                      | Yêu thích
-                    button.icon
-                      i.fas.fa-signal.mr-1
-                      | So sánh
-                    button.icon
-                      i.fa-solid.fa-envelope
-                      | Email
-                  h4.detail__title mô tả
-                  .detail__description
-                    p= description
-                  img(src="./assets/images/6.png", class="mt-3" alt="logo")
+          .detail__title
+            h2.main-heading Rượu nho năm 1987
+            p.main-price.mt-5 300.000
+              sup đ
+          .detail__rating
+            +rating({rating: 4})
+            span.mx-3 1 Review&lpar;S&rpar;
+            button Add Your Review
+          .detail__color.mt-4
+            h4.detail__title màu sắc
+            .color__list.d-flex
+              +ratio-input({ color : "orange"})
+              +ratio-input({ color : "black"})
+              +ratio-input({ color : "red"})
+            h4.detail__title kích cỡ
+            .detail__size
+              select(name='size')
+                option(value='big') Loại to
+                option(value='medium') Loại vừa
+                option(value='small') Loại nhỏ
+            h4.detail__title Số lượng
+            .detail__amount
+              button.btn-adjust -
+              input(type="text" value="3" class="input-amount")
+              button.btn-adjust +
+              button.button(type="button") add to card
+            .detail__action
+              button.icon
+                i.fa-solid.fa-heart
+                | Yêu thích
+              button.icon
+                i.fas.fa-signal.mr-1
+                | So sánh
+              button.icon
+                i.fa-solid.fa-envelope
+                | Email
+            h4.detail__title mô tả
+            .detail__description
+              p= description
+            img(src="./assets/images/6.png" class="mt-3" alt="logo")
       .tabs
         .detail__tabs
           +navAndTaps({tabs: tabContent, content: tabDesc , id: "tabs_product", isListCategories: false})
         .img-wrapper
-          img(src="/assets/images/home-image7.jpg", alt="detail images")
-          img(src="/assets/images/ruounho.png", class="image-hover" alt="hover-img")
+          img(src="/assets/images/home-image7.jpg" alt="detail images")
+          img(src="/assets/images/ruounho.png" class="image-hover" alt="hover-img")
       .product
         h2.introduction__title Sản phẩm liên quan
         .product__item
