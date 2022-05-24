@@ -1,3 +1,6 @@
+-
+  const pageNumber = 5;
+
 mixin pagination()
   nav(aria-label="Page navigation example")
     ul.pagination
@@ -5,7 +8,7 @@ mixin pagination()
         a(class="page-link pagination__previous" href="#" aria-label="Previous")
           span(aria-hidden="true") &laquo;
           span(class="sr-only") Previous
-      - for (index = 1; index  <= 5; index ++)
+      - for (index = 1; index  <= pageNumber; index ++)
         li(class=`page-item ${index === 2 ? "active" :""}`)
           a(class="page-link" href="#")= index
       li.page-item
