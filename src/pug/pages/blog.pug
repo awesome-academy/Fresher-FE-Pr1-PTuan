@@ -1,0 +1,15 @@
+extend ../base/base.pug
+block variables
+  - const title = " Blog "
+  - const currentUrl = "/blog"
+  - const numberPosts = 9
+
+block main
+  section.blog
+    .container
+      +breadcrumb("Trang chủ", "Blog")
+      h2.main-heading blog
+        .blog-container.mt-5.row.gx-3
+          - for (let i = 0; i < numberPosts; i++)
+            .col-lg-4.col-md-6.col-12.mt-3
+              +cardBlog({ data: cardData })
