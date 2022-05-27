@@ -2,12 +2,13 @@ mixin table( { data } )
   .table-responsive
     table.table.table-bordered
       thead
-        th(scope="col") ảnh
-        th(scope="col") tên sản phẩm
-        th(scope="col") giá
-        th(scope="col") số lượng
-        th(scope="col") tổng số
-        th(scope="col") xóa
+        tr
+          th(scope="col") ảnh
+          th(scope="col") tên sản phẩm
+          th(scope="col") giá
+          th(scope="col") số lượng
+          th(scope="col") tổng số
+          th(scope="col") xóa
       tbody
       each item in data
         tr.cart__row
@@ -18,5 +19,5 @@ mixin table( { data } )
           td= item.amount
           td= item.total
           td
-            a(href="#!" style="color: $p-gray")
+            a(href="#!")
               i(class="fas fa-trash-alt")
